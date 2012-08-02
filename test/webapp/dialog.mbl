@@ -1,0 +1,19 @@
+<zk xmlns:m="http://www.zkoss.org/2012/mobile" 
+	xmlns:zul="zul" xmlns:h="html" xmlns:w="client" >
+	
+	<m:style>
+	.ui-overlay-shadow {
+		box-shadow:none;
+	}
+	</m:style>
+	<m:dialog theme="d">
+		<m:header label="Dialog" theme="d">
+		</m:header>
+		<m:content label="Delete page?" theme="c">
+			<h:p>This is a regular page, styled as a dialog. To create a dialog, just link to a normal page and include a transition and <h:code>data-rel="dialog"</h:code> attribute.</h:p>
+			<h:a href="docs-dialogs.html" data-role="button" data-rel="back" data-theme="b">Sounds good</h:a>       
+			<h:a href="docs-dialogs.html" data-role="button" data-rel="back" data-theme="c">Cancel</h:a>
+		</m:content>
+	</m:dialog>
+	
+</zk>

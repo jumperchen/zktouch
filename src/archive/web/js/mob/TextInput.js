@@ -14,13 +14,10 @@ mob.TextInput = zk.$extends(mob.Widget, {
 		}
 	},
 	redraw : function(out) {
+		out.push('<div ',this.domAttrs_(),' >');
 		out.push('<label for="', this._label, '">', this._text, ' </label>');
-
-		out.push('<input type="', this._type, '" name="', this._label, '>');
+		out.push('<input type="', this._type, '" name="', this._label, '" />');
 		out.push('</div>');
-
-		out.push('<input type="', this._type, '" name="', this._label,
-				'" value="" />');
 
 	},
 	bindChildren_ : function() {

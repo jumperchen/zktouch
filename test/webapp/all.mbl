@@ -1,0 +1,47 @@
+<zk xmlns:m="http://www.zkoss.org/2012/mobile" 
+	xmlns:zul="zul" xmlns:h="html" xmlns:w="client" >
+	
+	<m:style>
+		.textinput label {
+			display: inline-block;
+			width: 20%;
+			margin: 0 2% 0 0;
+		}
+		.ui-overlay-shadow {
+			box-shadow:none;
+		}
+	</m:style>
+	
+	<m:view id="view1" active="true" title="2012軟體創作達人暑期成長營期中報告 - Powered by 程序員">
+
+		<m:header label="2012軟體創作達人暑期成長營期中報告" theme="b" />
+		
+		<m:controlgroup type="checkbox" text="Choose as many fruits as you'd like:" label="fruit-choice">
+			<m:controlgroupitem>Banana</m:controlgroupitem>
+			<m:controlgroupitem>Apple</m:controlgroupitem>
+			<m:controlgroupitem>Guava</m:controlgroupitem>
+			<m:controlgroupitem>Watermelon</m:controlgroupitem>
+		</m:controlgroup>
+		
+		<m:controlgroup type="radio" text="投票" label="president-choice">
+			<m:controlgroupitem>馬應九</m:controlgroupitem>
+			<m:controlgroupitem>吳蹲意</m:controlgroupitem>
+			<m:controlgroupitem>陳水匾</m:controlgroupitem>
+			<m:controlgroupitem>呂繡連</m:controlgroupitem>
+		</m:controlgroup>
+		
+		<m:div class="textinput">
+			<h:label for="slider-fill">Input slider:</h:label>
+			<m:slider type="range" name="slider-fill" value="60" min="0" max="100" dataHighlight="true" />
+		</m:div>
+		
+		<m:textinput class="textinput" label="password" type="password" text="password:"/>
+		<m:textinput class="textinput" label="date" type="date" text="date:"/>
+		<m:textinput class="textinput" label="number" type="number" text="number:"/>
+		<m:textinput class="textinput" label="color" type="color" text="color:"/>
+		
+		<m:footer theme="b" label="Powered by 程序員" />
+	
+	</m:view>
+	
+</zk>
