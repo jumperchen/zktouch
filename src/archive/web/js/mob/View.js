@@ -31,9 +31,11 @@ mob.View = zk.$extends(mob.Widget,{
 		out.push('</div>');
 	},
 	bindChildren_: function(){
+		
 		if(!$.data(this.$n(),"page")){
 			$.data( this.$n(), "page", new $.mobile.page( null, this.$n() ) );
-		}		
+		}
+		
 		this.$supers(mob.View ,'bindChildren_', arguments);
 	},
 	bind_: function () {

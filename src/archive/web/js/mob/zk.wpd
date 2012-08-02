@@ -6,6 +6,16 @@
 	<widget name="Header" />
 	<widget name="Footer" />
 	
+	<widget name="Dialog" />
+	<widget name="Content" />
+	
+	<widget name="Popup" />
+	<widget name="TextInput" />
+	<widget name="Slider" />
+	
+	<widget name="ControlGroup" />
+	<widget name="ControlGroupItem" />
+	
 	<script src="ext/jquery.mobile.js" />
 	<script src="mountjqm.js" />
 </package>

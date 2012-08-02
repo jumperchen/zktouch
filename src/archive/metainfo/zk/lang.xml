@@ -67,6 +67,42 @@
 		<component-name>footer</component-name> <!-- required -->
 		<component-class>org.zkoss.mobile.Footer</component-class> <!-- required -->
 		<widget-class>mob.Footer</widget-class> <!-- required -->
+	</component>
+	<component>
+		<component-name>dialog</component-name> <!-- required -->
+		<component-class>org.zkoss.mobile.Dialog</component-class> <!-- required -->
+		<widget-class>mob.Dialog</widget-class> <!-- required -->
+	</component>
+	<component>
+		<component-name>content</component-name> <!-- required -->
+		<component-class>org.zkoss.mobile.Content</component-class> <!-- required -->
+		<widget-class>mob.Content</widget-class> <!-- required -->
+	</component>
+	<component>
+		<component-name>popup</component-name> <!-- required -->
+		<component-class>org.zkoss.mobile.Popup</component-class> <!-- required -->
+		<widget-class>mob.Popup</widget-class> <!-- required -->
+	</component>
+	<component>
+		<component-name>textinput</component-name> <!-- required -->
+		<component-class>org.zkoss.mobile.TextInput</component-class> <!-- required -->
+		<widget-class>mob.TextInput</widget-class> <!-- required -->
+	</component>
+	<component>
+		<component-name>slider</component-name> <!-- required -->
+		<component-class>org.zkoss.mobile.Slider</component-class> <!-- required -->
+		<widget-class>mob.Slider</widget-class> <!-- required -->
+	</component>
+	
+	<component>
+		<component-name>controlgroup</component-name> <!-- required -->
+		<component-class>org.zkoss.mobile.ControlGroup</component-class> <!-- required -->
+		<widget-class>mob.ControlGroup</widget-class> <!-- required -->
+	</component>	
+	<component>
+		<component-name>controlgroupitem</component-name> <!-- required -->
+		<component-class>org.zkoss.mobile.ControlGroupItem</component-class> <!-- required -->
+		<widget-class>mob.ControlGroupItem</widget-class> <!-- required -->
 	</component>	
 		
 	<!-- wgt package -->
