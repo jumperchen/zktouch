@@ -8,9 +8,9 @@ mob.ControlGroupItem = zk.$extends(mob.Widget, {
 //		label : function() {
 //			this.rerender();
 //		},
-//		value : function() {
-//			this.rerender();
-//		},
+		value : function() {
+			this.rerender();
+		},
 	},
 	redraw : function(out, index) {
 //		out.push('<label for="', this.parent._label ,'-', index, '">', this.parent._label, '</label>');
@@ -19,7 +19,7 @@ mob.ControlGroupItem = zk.$extends(mob.Widget, {
 			this.redraw(out);
 		});
 		out.push('</label>');
-		out.push('<input type="', this.parent._type, '" name="', this.parent._label,'" id="', this.parent._label ,'-', index, '">');
+		out.push('<input type="', this.parent._type, '" name="', this.parent._label,'" id="', this.parent._label ,'-', index, '" value="', this._value , '">');
 //		out.push('<label for="hello">hello</label>');
 //		out.push('<input type="checkbox" name="hello" id="hello">');
 //		this.eachChild(function(index,child){

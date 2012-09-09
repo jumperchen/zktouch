@@ -30,11 +30,6 @@
 			<m:controlgroupitem>呂繡連</m:controlgroupitem>
 		</m:controlgroup>
 		
-		<m:div class="textinput">
-			<h:label for="slider-fill">Input slider:</h:label>
-			<m:slider type="range" name="slider-fill" value="60" min="0" max="100" dataHighlight="true" />
-		</m:div>
-		
 		<m:textinput class="textinput" label="password" type="password" text="password:"/>
 		<m:textinput class="textinput" label="date" type="date" text="date:"/>
 		<m:textinput class="textinput" label="number" type="number" text="number:"/>

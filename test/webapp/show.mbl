@@ -1,0 +1,26 @@
+<zk xmlns:m="http://www.zkoss.org/2012/mobile" 
+	xmlns:zul="zul" xmlns:h="html" xmlns:w="client" >
+
+	<style>
+		.categorys .z-label{
+			font-weight:bold;
+			font-size:16px;
+		}
+	</style>
+	<zscript>
+		import model.Friend;
+  	  	import composer.IndexComposer;
+  	  	String id = Executions.getCurrent().getParameter("id");
+  	  	Friend friend = IndexComposer.friendDao.findFriendByID(Integer.parseInt(id));
+	</zscript>
+	<m:view active="true"  title="ZK Forum Search">
+		<m:header label="${friend.name}" theme="a" >
+			<h:a href="index.mbl" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</h:a>
+		</m:header>
+		<h:img src="${friend.avatar_url}" style="float:left"/>
+		<h:label for="phone">Phone：</h:label><h:i>${friend.phone}</h:i><h:br/>
+		<h:label for="email">Email：</h:label><h:i>${friend.email}</h:i><h:br/>
+		<h:label for="birthday">Birthday：</h:label><h:i>${friend.birthday}</h:i><h:br/>
+ 		<m:footer style="position:fixed; bottom:0" theme="a" label="Powered by ZK Touch" />
+ 	</m:view>
+</zk>

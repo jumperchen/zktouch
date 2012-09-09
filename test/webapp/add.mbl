@@ -1,0 +1,38 @@
+<zk xmlns:m="http://www.zkoss.org/2012/mobile" 
+	xmlns:zul="zul" xmlns:h="html" xmlns:w="client" >
+	
+	<m:style>
+		.textinput label {
+			display: inline-block;
+			width: 20%;
+			margin: 0 2% 0 0;
+		}
+	</m:style>
+	
+	<m:view id="view1" active="true" title="Contact - 新增聯絡人">
+		<m:header style="position: fixed; z-index:1; width:100%" label="新增聯絡人" theme="a">
+			<h:a href="index.mbl" data-icon="back" data-iconpos="notext" data-direction="reverse">Back</h:a>
+		</m:header>
+		
+		<h:form style="padding-top:40px; padding-bottom:40px" method="POST" action="save.zul">
+			<m:textinput class="textinput" id="name" label="name" type="text" text="姓名:"/>
+			<m:textinput class="textinput" id="avatar_url" label="avatar_url" type="text" text="照片URL:"/>
+			<m:textinput class="textinput" id="phone" label="phone" type="text" text="電話:"/>
+			<m:textinput class="textinput" id="email" label="email" type="text" text="E-Mail:"/>
+			<m:textinput class="textinput" id="birthday" label="birthday" type="date" text="生日:"/>
+			
+			<m:controlgroup type="radio" text="性別" id="gender" label="gender">
+				<m:controlgroupitem value="1">男</m:controlgroupitem>
+				<m:controlgroupitem value="2">女</m:controlgroupitem>
+			</m:controlgroup>
+			
+			<h:br/>
+			<h:input type="submit" value="新增" />
+			
+		</h:form>
+
+		<m:footer style="position:fixed; bottom:0" theme="a" label="Powered by 程序員" />
+		
+	</m:view>
+	
+</zk>

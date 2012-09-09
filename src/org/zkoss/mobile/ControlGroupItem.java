@@ -15,7 +15,7 @@ public class ControlGroupItem extends JQueryMobileElement {
 //	private String _type;
 //	private String _label;
 //	private String _class;
-//	private Boolean _value = false;
+	private String _value;
 
 	protected void renderProperties(ContentRenderer renderer)
 			throws IOException {
@@ -23,7 +23,7 @@ public class ControlGroupItem extends JQueryMobileElement {
 //		render(renderer, "type", _type);
 //		render(renderer, "label", _label);
 //		render(renderer, "class", _class);
-//		render(renderer, "value", _value);
+		render(renderer, "value", _value);
 	}
 
 //	public String getType() {
@@ -48,23 +48,23 @@ public class ControlGroupItem extends JQueryMobileElement {
 //		}
 //	}
 	
-//	/**
-//	 * @return the value
-//	 */
-//	public Boolean getValue() {
-//		return _value;
-//	}
-//
-//	/**
-//	 * @param inline
-//	 *            the value to set
-//	 */
-//	public void setValue(Boolean value) {
-//
-//		if (!Objects.equals(this._value, value)) {
-//			this._value = value;
-//			smartUpdate("value", value);
-//		}
-//	}
+	/**
+	 * @return the value
+	 */
+	public String getValue() {
+		return _value;
+	}
+
+	/**
+	 * @param inline
+	 *            the value to set
+	 */
+	public void setValue(String value) {
+
+		if (!Objects.equals(this._value, value)) {
+			this._value = value;
+			smartUpdate("value", value);
+		}
+	}
 
 }

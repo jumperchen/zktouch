@@ -1,0 +1,41 @@
+<zk xmlns:n="native">
+  
+  <zscript>
+  	  import model.Friend;
+  	  import composer.IndexComposer;
+  	  
+  	  
+      Map m = Executions.getCurrent().getParameterMap();
+      Iterator ir =  m.keySet().iterator();
+      StringBuffer sb = new StringBuffer();
+      Friend friend = new Friend();
+      while(ir.hasNext()){
+              String key = (String) ir.next();
+              if(key.equals("name")) {
+              	friend.setName(m.get(key)[0]);
+              }
+              if(key.equals("avatar_url")) {
+              	friend.setAvatar_url(m.get(key)[0]);
+              }
+              if(key.equals("phone")) {
+              	friend.setPhone(m.get(key)[0]);
+              }
+              if(key.equals("email")) {
+              	friend.setEmail(m.get(key)[0]);
+              }
+              if(key.equals("birthday")) {
+              	friend.setBirthday(m.get(key)[0]);
+              }
+              if(key.equals("gender")) {
+              	friend.setGender(Integer.parseInt(m.get(key)[0]));
+              }
+              
+              //sb.append(key+":"+m.get(key)[0] +"\n");
+      }
+      composer.IndexComposer.friendDao.addFriend(friend);
+      	
+      //String ret = sb.toString();
+      Executions.sendRedirect("index.mbl");
+  </zscript>
+  <n:pre>${ret}</n:pre>
+</zk>

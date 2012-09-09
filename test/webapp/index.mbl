@@ -2,6 +2,7 @@
 	xmlns:zul="zul" xmlns:h="html" xmlns:w="client" >
 
 	<style>
+		.ui-page { -webkit-backface-visibility: hidden; }
 		.categorys .z-label{
 			font-weight:bold;
 			font-size:16px;
@@ -20,22 +21,33 @@
 			width:20%;
 			text-align:center;
 		}
+		.ui-footer{
+			bottom:0;
+		    width:100%;
+		}
 	</style>
 	<m:view active="true" apply="composer.IndexComposer" title="ZK Forum Mobile">
-		<m:header label="ZK Forum" theme="b" >
-			<h:a href="index.mbl" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</h:a>
-			<h:a href="search.mbl" data-icon="search" data-iconpos="notext"  date-direction="right" data-rel="dialog" data-transition="fade">Search</h:a>
+		<m:header style="position: fixed; z-index:1; width:100%" label="Contact Book" theme="a" >
+			<h:div data-role="navbar">
+				<h:ul>
+					<h:li><h:a href="#" data-icon="star">Favorite</h:a></h:li>
+					<h:li><h:a href="#" data-icon="grid">Dial</h:a></h:li>
+				</h:ul>
+			</h:div>
 		</m:header>
- 		<m:listbox id="listbox" class="categorys" theme="c" >
+ 		<m:listbox id="listbox" class="friend" theme="c" style="padding-bottom:45px;padding-top:90px" >
  			<template name="model" >
- 				<m:listitem href="category.mbl?category=${each.id}">
+ 				<m:listitem style="z-index:0" href="show.mbl?id=${each.id}">
 					<m:div class="info">
-						<div class="title">${each.name}</div>
-						<div class="author">${each.threads}</div>
-					</m:div>					
- 				</m:listitem> 				
+						<div class="avatar" style="width:10%"><h:img src="${each.avatar_url}" style="width:48px; height:48px; float: left"/></div>
+						<div class="name" style="width:90%;font-size:36px; margin: 0 auto; font-weight:bold">${each.name}</div>
+					</m:div>
+ 				</m:listitem>
  			</template>
  		</m:listbox>
- 		<m:footer theme="b" label="Powered by ZK Touch" />
+ 		<m:footer style="position: fixed" theme="a" label="Powered by 程序員">
+ 			<h:a href="add.mbl" data-direction="reverse" data-transition="slidedown" style="position:absolute;right:.5em;top:.5em" data-role="button" data-iconpos="notext" data-icon="plus">Add</h:a>
+ 			<h:a href="search.mbl" data-direction="reverse" data-transition="slidedown" style="position:absolute;left:.5em;top:.5em" date-direction="right" data-role="button" data-icon="search" data-iconpos="notext">Search</h:a>		
+ 		</m:footer>
  	</m:view>
 </zk>

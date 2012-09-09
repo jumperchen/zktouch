@@ -1,0 +1,12 @@
+<zk xmlns:m="http://www.zkoss.org/2012/mobile" xmlns:zul="zul" xmlns:h="html" xmlns:w="client" >
+	<m:view id="page1" active="true">
+		<m:header label="Page 1" theme="b" />
+		<zul:button label="Goto Page 2" onClick="page2.setActive(true);page1.setActive(false);" />
+	</m:view>
+	
+	<m:view id="page2" active="false">
+		<m:header label="Page 2" theme="c" />
+		<zul:button label="Goto Page 1" onClick="page1.setActive(true);page2.setActive(false);" />
+	</m:view>
+
+</zk>
